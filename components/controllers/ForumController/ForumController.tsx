@@ -4,7 +4,7 @@ import React from 'react'
 
 const dummyPosts: Post [] = [
     {
-    dateCreated: new Date("3rd february 2025"),
+    dateCreated:  new Date("2025, 2, 03, 11:12:11"),
     textContent: "I found this strange clock at Salvation Army Store on Union Street",
     media: ["/s-l1200.jpg"],
     tags:  [""],
@@ -21,7 +21,7 @@ const dummyPosts: Post [] = [
                 profileLink: "/view-profile/lisa-smith"  
             },
             text: "That's just like the one my aunt used to have, only greener",
-            dateCreated: new Date("4th february 2025")
+            dateCreated: new Date("2025, 2, 03, 11:30:11")
         },
          {   
             author: {
@@ -30,7 +30,7 @@ const dummyPosts: Post [] = [
                 profileLink: "/view-profile/lisa-smith"
             },
             text: "No way! It's such a strange item",
-            dateCreated: new Date("4th february 2025")
+            dateCreated: new Date("2025, 2, 03, 11:45:36"),
         },
   
     ]
