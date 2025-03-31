@@ -51,6 +51,18 @@ export default {
           "4": "hsl(var(--chart-4))",
           "5": "hsl(var(--chart-5))",
         },
+                // Light mode palette
+        'gray-900': '#1A1A1A',    // deep grey (text primary)
+        'gray-600': '#737373',    // mid grey (text secondary)
+        'peach-light': '#FFF7ED', // soft peach background
+        'peach': '#FFD3AC',       // peach accent/highlight
+        'violet-brand': '#7C3AED',// primary brand violet
+        // Dark mode palette
+        'dark-bg': '#121212',     // dark mode background
+        'dark-surface': '#1E1B26',// raised surface with violet tint
+        'dark-text': '#EAEAEA',   // light grey text
+        'lime-accent': '#A3E635', // lime green accent
+        'cyan-accent': '#22D3EE'  // cyan accent
       },
       borderRadius: {
         lg: "var(--radius)",
