@@ -28,7 +28,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${geistSans.className} antialiased  bg-gradient-to-b from-0% from-slate-950 via-20% via-slate-900 to-90% to-black`}>
+      {/* <body className={`${geistSans.className} antialiased  bg-gradient-to-b from-0% from-slate-950 via-20% via-slate-900 to-90% to-black`}> */}
+      <body className={`${geistSans.className} antialiased "bg-peach-light text-gray-900 dark:bg-dark-bg dark:text-dark-text"`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
