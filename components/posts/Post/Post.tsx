@@ -1,8 +1,11 @@
+'use client'
 import { Post as PostType } from '@/types/post'
-import Link from 'next/link'
+
 import React from 'react'
 import Comment from '../Comment/Comment'
 import Image from 'next/image'
+import FeedPostHeader from './PostHeader/PostHeader'
+
 
 
 function Post( {...props}: PostType) {
@@ -10,11 +13,9 @@ function Post( {...props}: PostType) {
     
   return (
     <div className='w-full flex flex-col bg-slate-500 min-h-14 p-10 gap-4'>
-        <div className='flex flex-row gap-2'>
-            <div className="rounded-xl border-cyan-600 border bg-slate-300 h-6 w-6"></div>
-            <span><Link href={props.author.profileLink}>
-                   {props.author.name}</Link></span>
-        </div>
+
+        <FeedPostHeader {...props} />
+
 
         <div>
             <span>{props.textContent}</span>
