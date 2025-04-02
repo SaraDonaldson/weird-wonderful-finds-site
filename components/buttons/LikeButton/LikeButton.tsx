@@ -12,6 +12,8 @@ function LikeButton({numberOfLikes, liked, toggleLikePostCallback}:LikeButtonPro
 
   const [isLiked, setIsLiked] = useState<boolean>(liked);
   const [likeCount, setLikeCount] = useState<number>(numberOfLikes);
+   const [animating, setAnimating] = useState<boolean>(false);
+  const [countAnimating, setCountAnimating] =useState<boolean>(false);
  
   
   return (
