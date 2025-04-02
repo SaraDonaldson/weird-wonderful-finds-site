@@ -1,6 +1,6 @@
 'use client'
 import { Heart } from 'lucide-react'
-import React from 'react'
+import React, { useState } from 'react'
 
 interface LikeButtonProps{
     numberOfLikes: number
@@ -10,12 +10,15 @@ interface LikeButtonProps{
 
 function LikeButton({numberOfLikes, liked, toggleLikePostCallback}:LikeButtonProps) {
 
-
+  const [isLiked, setIsLiked] = useState<boolean>(liked);
+  const [likeCount, setLikeCount] = useState<number>(numberOfLikes);
+ 
+  
   return (
     <button className="flex items-center space-x-1 text-gray-600 dark:text-gray-400 
                        hover:text-violet-brand dark:hover:text-cyan-accent transition">
       <Heart />
-      <span className="text-sm">128</span>
+      <span className="text-sm">{likeCount}</span>
     </button>
   )
 }
