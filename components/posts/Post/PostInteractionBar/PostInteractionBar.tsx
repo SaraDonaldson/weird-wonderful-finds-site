@@ -5,11 +5,20 @@ import SharePostButton from '@/components/buttons/SharePostButton/SharePostButto
 import React from 'react'
 
 function PostInteractionBar() {
+
+    function likeToggle(){
+        console.log("liked/unliked")
+    }
+
+    function triggerComment(){
+        console.log('open comment form')
+    }
+
   return (
         <div className="border-t border-gray-200 dark:border-gray-700 px-4 py-3 flex items-center justify-between">
         <div className="flex items-center space-x-6">
-            <LikeButton/>
-            <CommentButton />
+            <LikeButton liked={false} numberOfLikes={36} toggleLikePostCallback={likeToggle} />
+            <CommentButton  triggerCommentCallback={triggerComment}/>
             <SharePostButton/>
         </div>
             <SavePostButton/>
