@@ -59,7 +59,7 @@ export default {
         'violet-brand': '#7C3AED',// primary brand violet
         // Dark mode palette
         'dark-bg': '#121212',     // dark mode background
-        'dark-surface': '#1E1B26',// raised surface with violet tint
+        'dark-surface': '#170f30',// raised surface with violet tint
         'dark-text': '#EAEAEA',   // light grey text
         'lime-accent': '#A3E635', // lime green accent
         'cyan-accent': '#22D3EE'  // cyan accent
