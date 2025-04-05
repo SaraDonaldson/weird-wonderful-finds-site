@@ -19,7 +19,7 @@ function PostInteractionBar() {
         <div className="flex items-center space-x-6">
             <LikeButton liked={false} numberOfLikes={36} toggleLikePostCallback={likeToggle} />
             <CommentButton  triggerCommentCallback={triggerComment}/>
-            <SharePostButton/>
+            <SharePostButton postId='2667gdbdjoddg'/>
         </div>
             <SavePostButton/>
       </div>
