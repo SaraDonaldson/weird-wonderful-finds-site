@@ -9,7 +9,7 @@ interface ScrollableFeedProps{
 function ScrollableFeed({posts}:ScrollableFeedProps) {
 
   return (
-    <div className="w-3/5 h-screen mx-auto px-10 py-10 flex-col">
+    <div className="w-3/5 h-screen mx-auto px-10 py-10 flex-col mt-32">
         <div className="flex flex-col h-screen">
 
             {posts?.map((post:PostType, i) => {
