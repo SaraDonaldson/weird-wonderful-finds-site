@@ -13,6 +13,9 @@ function PostInteractionBar() {
     function triggerComment(){
         console.log('open comment form')
     }
+     function savePostToggle(){
+        console.log('save post to bookmarks')
+    }
 
   return (
         <div className="border-t border-gray-200 dark:border-gray-700 px-4 py-3 flex items-center justify-between">
@@ -21,7 +24,7 @@ function PostInteractionBar() {
             <CommentButton  triggerCommentCallback={triggerComment}/>
             <SharePostButton postId='2667gdbdjoddg'/>
         </div>
-            <SavePostButton/>
+            <SavePostButton toggleSavePostCallback={savePostToggle} saved={false}/>
       </div>
   )
 }
