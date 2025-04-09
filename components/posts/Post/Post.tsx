@@ -1,16 +1,31 @@
 'use client'
-import { Post as PostType } from '@/types/post'
+import { PostComment, Post as PostType } from '@/types/post'
 
-import React from 'react'
+import React, { useState } from 'react'
 import Comment from '../Comment/Comment'
 import Image from 'next/image'
 import FeedPostHeader from './PostHeader/PostHeader'
 import PostInteractionBar from './PostInteractionBar/PostInteractionBar'
+import AddCommentBelowButton from '@/components/forms/fields/AddComment/AddComment'
 
 
 
 function Post( {...props}: PostType) {
+    const [postComments, setPostComments]= useState<PostComment []>(props.comments||[])
   
+    function addCommentToPost(comment:string){
+        const newComment:PostComment = {
+            author: {
+                name: "current_user",
+                profileImage: "...",
+                profileLink: "user/current_user"
+            },
+            text: comment,
+            dateCreated: new Date(),
+        }
+        const comments = [...postComments, newComment]
+        setPostComments(comments)
+    }
     
   return (
     // <div className='w-full flex flex-col bg-slate-500 min-h-14 p-10 gap-4'>
@@ -37,13 +52,15 @@ function Post( {...props}: PostType) {
 
         <div>
             {
-                props.comments &&
-                props.comments.map((comment, i) => {
+                postComments.length > 0 &&
+                postComments.map((comment, i) => {
                     return(
                         <Comment key={i} comment ={comment}/>
                     )
                 })
             }
+            <AddCommentBelowButton addNewCommentCallback={addCommentToPost}/>
+            
         </div>
 
     </div>
