@@ -57,6 +57,7 @@
     --chart-5: 340 75% 55%;
     --comment-active-bg: oklch(96.8% 0.007 247.896);
     --comment-bg: oklch(98.4% 0.003 247.858);
+    --comment-detail: oklch(27.9% 0.041 260.031);
   }
 }
 
