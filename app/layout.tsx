@@ -37,7 +37,9 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Nav/>
-          {children}
+          <div className="w-full min-h-screen h-auto mt-10 mb-56">
+            {children}
+          </div>
           <Footer/>
         </ThemeProvider>
 
