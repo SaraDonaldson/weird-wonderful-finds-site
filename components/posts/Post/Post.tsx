@@ -29,7 +29,7 @@ function Post( {...props}: PostType) {
     
   return (
     // <div className='w-full flex flex-col bg-slate-500 min-h-14 p-10 gap-4'>
-    <div className='w-full flex flex-col min-h-14 p-10 gap-4 bg-white dark:bg-dark-surface rounded-lg shadow-lg max-w-3xl mx-auto'>
+    <div className='w-full flex flex-col min-h-14  h-auto p-10 gap-4 bg-white dark:bg-dark-surface rounded-lg shadow-lg max-w-3xl mx-auto'>
 
         <FeedPostHeader {...props} />
 
