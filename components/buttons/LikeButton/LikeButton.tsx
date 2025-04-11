@@ -6,15 +6,17 @@ interface LikeButtonProps{
     numberOfLikes: number
     liked:boolean
     toggleLikePostCallback: ()=> void
+    sizeXS?: boolean
 }
 
-function LikeButton({numberOfLikes, liked, toggleLikePostCallback}:LikeButtonProps) {
+function LikeButton({numberOfLikes, liked, toggleLikePostCallback,sizeXS}:LikeButtonProps) {
 
   const [isLiked, setIsLiked] = useState<boolean>(liked);
   const [likeCount, setLikeCount] = useState<number>(numberOfLikes);
   const [animating, setAnimating] = useState<boolean>(false);
   const [countAnimating, setCountAnimating] =useState<boolean>(false);
  
+  
 
    function handleToggle() {
     //  Update like count
@@ -33,7 +35,7 @@ function LikeButton({numberOfLikes, liked, toggleLikePostCallback}:LikeButtonPro
   
     // Animation CSS Tailwind values
       const iconBase =
-    'h-6 w-6 transition-transform duration-150 ease-out ' +
+    `${sizeXS? 'h-4 w-4' :'h-6 w-6'} transition-transform duration-150 ease-out ` +
     'transition-colors duration-200 ease-in-out ' +
     'cursor-pointer';
 
@@ -61,15 +63,15 @@ function LikeButton({numberOfLikes, liked, toggleLikePostCallback}:LikeButtonPro
         >
         <div className={`${iconBase} ${isLiked ? iconLikedTW : iconNotlikedTW} ${iconAnimatingTW}`}>
         {isLiked ? (
-          <Heart fill='oklch(60% 0.118 184.704)' aria-hidden="true" />
+          <Heart fill='oklch(60% 0.118 184.704)' aria-hidden="true" size={sizeXS ? 16 : 24}/>
         ) : (
-          <Heart aria-hidden="true" />
+          <Heart aria-hidden="true" size={sizeXS ? 16 : 24} />
         )}
       </div>
 
       
-      <span  className={`text-sm ${countBaseTW} ${countTransition} ${countAnimatingTW} ${
-          isLiked ? 'text-violet-brand dark:text-teal-600' : 'text-gray-600 dark:text-gray-400'
+      <span  className={`${sizeXS ? 'text-xs  text-slate-500' : 'text-sm dark:text-gray-400'} ${countBaseTW} ${countTransition} ${countAnimatingTW} ${
+          isLiked ? 'text-violet-brand dark:text-teal-600' : `${sizeXS ? 'text-xs  text-slate-500' : 'text-sm text-gray-400'}`
         }`}>{likeCount}</span>
     </button>
   )
