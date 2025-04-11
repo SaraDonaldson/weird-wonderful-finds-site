@@ -72,14 +72,14 @@ function AddComment({addNewCommentCallback}: AddCommentProps) {
                     </FormItem>
                   )}
                   />
-   
-                  <Button 
-                    type='submit'
-                    className={`${showSubmit? 'visible': 'hidden'} inline-flex items-center px-4 py-2 bg-violet-brand dark:bg-slate-700 text-slate-100 
-                   rounded-md text-sm font-medium hover:bg-violet-brand/90 dark:hover:bg-slate-600
-                   focus:outline-none focus:dark:bg-slate-400 disabled:opacity-50 cursor-pointer`}
-                    >add comment</Button>
-                  
+                  {  showSubmit &&
+                    <Button 
+                      type='submit'
+                      className={`inline-flex items-center px-4 py-2 bg-violet-brand dark:bg-slate-700 text-slate-100 
+                    rounded-md text-sm font-medium hover:bg-violet-brand/90 dark:hover:bg-slate-600
+                    focus:outline-none focus:dark:bg-slate-400 disabled:opacity-50 cursor-pointer`}
+                      >add comment</Button>
+                  }
                 </form>
             </Form>
 
