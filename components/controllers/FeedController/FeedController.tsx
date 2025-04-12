@@ -21,27 +21,38 @@ const dummyPosts: Post [] = [
                 profileLink: "/view-profile/lisa-smith"  
             },
             text: "That's just like the one my aunt used to have, only greener",
-            dateCreated: new Date("2025, 2, 03, 11:30:11")
+            dateCreated: new Date("2025, 2, 03, 11:30:11"),
+            commentReplies:[
+                   {   
+                        author: {
+                            name: "Lisa Smith",
+                            profileImage: "...",
+                            profileLink: "/view-profile/lisa-smith"
+                        },
+                        text: "No way! It's such a strange item",
+                        dateCreated: new Date("2025, 2, 03, 11:45:36"),
+                    },
+            ]
         },
-         {   
-            author: {
-                name: "Lisa Smith",
+        {
+            author:{
+                name:"vintage_victor",
                 profileImage: "...",
-                profileLink: "/view-profile/lisa-smith"
+                profileLink: "/view-profile/vintage_victor"
             },
-            text: "No way! It's such a strange item",
-            dateCreated: new Date("2025, 2, 03, 11:45:36"),
+            text: "Wow—this Polaroid SX-70 looks mint! Where did you find it? I’ve been on the hunt for one in this condition for months.",
+            dateCreated: new Date("2025, 3, 4, 15:22:11") ,
         },
-  
-    ]
-    },
-
-
+    ],
+    }
 ]
+
+
+
 
 function FeedController() {
   return (
-    <div className='w-full min-h-screen'>
+    <div className='w-full min-h-screen h-auto'>
         <ScrollableFeed posts={dummyPosts}/>
     </div>
   )
