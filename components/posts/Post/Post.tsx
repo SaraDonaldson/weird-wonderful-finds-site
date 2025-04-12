@@ -55,7 +55,7 @@ function Post( {...props}: PostType) {
                 postComments.length > 0 &&
                 postComments.map((comment, i) => {
                     return(
-                        <Comment key={i} comment ={comment}/>
+                        <Comment key={i} comment ={comment} lastComment={i === postComments.length-1}/>
                     )
                 })
             }
