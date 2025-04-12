@@ -13,10 +13,14 @@ export interface Author{
     profileLink: string
 }
 
-export interface PostComment{
+
+export interface Comment{
     text?: string
     media?: string []
     author: Author
     dateCreated: Date
     dateUpdated?: Date
+}
+export interface PostComment extends Comment{
+    commentReplies?: Comment []
 }
