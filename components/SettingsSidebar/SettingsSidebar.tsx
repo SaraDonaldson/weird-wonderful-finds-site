@@ -12,7 +12,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
-import { ArrowLeft, Bell, ChevronLeft, Lock, NewspaperIcon, Settings, SlidersHorizontalIcon, WholeWordIcon } from "lucide-react"
+import { ArrowLeft, Bell, Lock, NewspaperIcon, Settings, SlidersHorizontalIcon, WholeWordIcon } from "lucide-react"
 import Link from "next/link"
 
 const items = [
